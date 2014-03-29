@@ -8,6 +8,11 @@ ME="$(basename "$0")"
 
 USAGE="${ME}  [ file  [  tag  [  value  ]  ]  ]"
 
+if [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]] ; then
+	echo -e "USAGE: \n   $USAGE"
+	exit 0
+fi
+
 BIN=./id3ted
 TEST_FILE_ORIG=""
 TEST_DIR="."
