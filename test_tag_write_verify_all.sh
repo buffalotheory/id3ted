@@ -85,6 +85,10 @@ $BIN --frame-list \
 		TSIZ)
 			VAL="$(stat --format=%s "${MP3_FILE}")"
 			;;
+		TXXX)
+			# TODO: insure that this is spec-compliant
+			VAL="TEXT1:DESCRIPTION1"
+			;;
 		TSRC)
 			# International Standard Recording Code [1]
 			VAL="CC-XXX-YY-NNNNN"

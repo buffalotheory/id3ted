@@ -90,6 +90,13 @@ case $TAG in
 		# COMM: [](XXX): VAL COMM
 		TRACE "$TAG TAG: filtered diff"
 		;;
+	TXXX)
+		text="${res/*: /}"
+		desc="${res/*[/}"
+		desc="${desc/]*/}"
+		res="${text}: ${desc}"
+		TRACE "$TAG TAG: filtered diff"
+		;;
 	WXXX)
 		res="${res/\[\]: /}"
 		TRACE "$TAG TAG: filtered diff"
