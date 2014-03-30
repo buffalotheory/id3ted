@@ -62,6 +62,7 @@ cat writable_fields.lst \
 		APIC)
 			# TODO: better APIC test with image verify
 			VAL="http://www.w3.org/Graphics/PNG/alphatest.png"
+			[[ ! -f "alphatest" ]] && wget "$VAL"
 			VAL="alphatest.png"
 			;;
 		PCNT)
