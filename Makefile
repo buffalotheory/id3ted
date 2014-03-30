@@ -26,3 +26,6 @@ tags: *.h *.cpp
 
 cscope: *.h *.cpp
 	cscope -b
+
+test: id3ted
+	./test_tag_write_verify_all.sh 2>&1 | grep -i "failed\|complete"
