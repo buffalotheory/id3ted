@@ -7,9 +7,13 @@
 ME="$(basename "$0")"
 USAGE="${ME} [ test_directory ]"
 
+
+# defaults
+BIN=./id3ted
 TEST_DIR="/tmp/"
 [[ "$2" ]] && TEST_DIR="$2"
 ORIGINAL_MEDIA_DIR="${TEST_DIR}/original_media"
+
 
 # functions
 function TRACE() {
@@ -25,8 +29,7 @@ if [[ ! -d "$ORIGINAL_MEDIA_DIR" ]] ; then
 	exit 2
 fi
 
-# randomly-selected, relatively-short mp3 with free license
-#wget http://freemusicarchive.org/music/download/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+# MP3_URL: a randomly-selected (by the author), relatively-short mp3 file with free license
 MP3_URL="http://freemusicarchive.org/music/download/e263a939f306c27e29cdbbd0a8b11a380b2d5628"
 MP3_FILE="${ORIGINAL_MEDIA_DIR}/e263a939f306c27e29cdbbd0a8b11a380b2d5628"
 if [[ ! -f "${MP3_FILE}" ]] ; then
@@ -43,12 +46,11 @@ if [[ ! -f "${MP3_FILE}" ]] ; then
 	exit 4
 fi
 
-#if ! pushd "$TEST_DIR" ; then
-#    echo "ERROR: failed to change directory to TEST_DIR $TEST_DIR" >&2
-#    exit 5
-#fi
-
-cat writable_fields.lst \
+$BIN --frame-list \
+| grep "^\ \ \*" \
+| while read a b c ; do
+	echo $b
+  done \
 | sed "s/\#.*//;/^[ \t]*$/d" \
 | head -n 1000 \
 | (
@@ -57,7 +59,7 @@ cat writable_fields.lst \
 	num_failed=0
 	test_result="passed"
 	while read TAG ; do
-		# handle exceptions
+		# handle special cases
 		case $TAG in
 		APIC)
 			# TODO: better APIC test with image verify
@@ -84,8 +86,7 @@ cat writable_fields.lst \
 			VAL="$(stat --format=%s "${MP3_FILE}")"
 			;;
 		TSRC)
-			# International Standard Recording Code
-			# http://en.wikipedia.org/wiki/International_Standard_Recording_Code
+			# International Standard Recording Code [1]
 			VAL="CC-XXX-YY-NNNNN"
 			;;
 		TYER)
@@ -101,7 +102,7 @@ cat writable_fields.lst \
 			num_failed=$(expr $num_failed + 1)
 			test_result="failed"
 		fi
-		# (( num_tags++ )) # bash iterator
+		# (( num_tags++ )) # bash iterator (tested)
 		num_tags=$(expr $num_tags + 1) # busybox-safe iterator; both work in bash
 		echo "" >&2 # for a little easier-to-read formatting
 	done
@@ -116,3 +117,9 @@ cat writable_fields.lst \
 )
 
 exit $?
+
+# References:
+
+	# [1]
+	# International Standard Recording Code
+	# http://en.wikipedia.org/wiki/International_Standard_Recording_Code
