@@ -64,6 +64,32 @@ cat writable_fields.lst \
 			VAL="http://www.w3.org/Graphics/PNG/alphatest.png"
 			VAL="alphatest.png"
 			;;
+		PCNT)
+			VAL="1234"
+			;;
+		RBUF)
+			VAL="1024"
+			;;
+		TBPM)
+			VAL="110"
+			;;
+		TPOS,TRCK)
+			VAL="4/9"
+			;;
+		TRDA)
+			VAL="$(date)"
+			;;
+		TSIZ)
+			VAL="$(stat --format=%s "${MP3_FILE}")"
+			;;
+		TSRC)
+			# International Standard Recording Code
+			# http://en.wikipedia.org/wiki/International_Standard_Recording_Code
+			VAL="CC-XXX-YY-NNNNN"
+			;;
+		TYER)
+			VAL="2014"
+			;;
 		*)
 			VAL="VAL $TAG"
 			;;
@@ -76,6 +102,7 @@ cat writable_fields.lst \
 		fi
 		(( num_tags++ )) # bash iterator
 		# num_tags=$(expr $num_tags + 1) # busybox-safe iterator
+		echo "" >&2 # for a little easier-to-read formatting
 	done
 	TRACE "Test Sequence complete: $num_passed tests passed, $num_failed tests failed, $num_tags total tags"
 	if [[ "$test_result" == "passed" ]] ; then

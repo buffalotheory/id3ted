@@ -26,20 +26,19 @@ function TRACE() {
 	echo -e "$(date "+%Y%m%d_%H%M%S") ${ME}: $1" >&2
 }
 
-TRACE "START: executing test to verify read/write of id3 BPM field"
-
 # handle args
 if [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]] ; then
 	echo -e "USAGE: \n   $USAGE"
 	exit 0
 fi
 [[ "$1" ]] && TEST_FILE_ORIG="$1"
+[[ "$2" ]] && TAG="$2"
+[[ "$3" ]] && VAL="$3"
+
 if [[ ! "$TEST_FILE_ORIG" ]] ; then
 	TRACE "ERROR: test audio file must be specified.  Exiting abnormally."
 	exit 2
 fi
-[[ "$2" ]] && TAG="$2"
-[[ "$3" ]] && VAL="$3"
 
 # allow tag to be specified as the full FID3_???? name, as used in the sources
 TAG="${TAG#FID3_}"
@@ -49,7 +48,7 @@ file_under_test="$TEST_DIR"/"$(basename "$TEST_FILE_ORIG")"
 
 
 # something like main
-TRACE "Starting Test: (params: BIN=${BIN}  TEST_FILE=${TEST_FILE_ORIG}  TAG=${TAG}  VAL=${VAL})"
+TRACE "START TEST: executing id3 frame read/write test (params: BIN=${BIN}  TEST_FILE=${TEST_FILE_ORIG}  TAG=${TAG}  VAL=${VAL})"
 
 TRACE "copying source testfile $TEST_FILE_ORIG to working file $file_under_test"
 cp -a "$TEST_FILE_ORIG" "$file_under_test"
@@ -74,28 +73,37 @@ fi
 
 res="$(diff <(echo -e "$tags_before") <(echo -e "$tags_after"))"
 
-TRACE "changes to file_under_test ${file_under_test}:"
+TRACE "changes to file_under_test ${file_under_test} (${#res} character diff):"
 echo -e "$res" | sed "s/^/\ \ \ /"
 
 # need tag-specific result handling
 case $TAG in
 	APIC)
 		SUCCESS_REGEX="> APIC: image/"
-		TRACE "APIC TAG REGEX: $SUCCESS_REGEX"
+		TRACE "$TAG TAG REGEX: $SUCCESS_REGEX"
 		;;
 
 	COMM)
 		res="${res/\[\]\(XXX\): /}"
 		# COMM: [](XXX): VAL COMM
-		TRACE "COMM TAG: filtering diff"
+		TRACE "$TAG TAG: filtered diff"
 		;;
+	WXXX)
+		res="${res/\[\]: /}"
+		TRACE "$TAG TAG: filtered diff"
+		;;
+	
 	*)
 		SUCCESS_REGEX="> [ \t]*${TAG}:[ \t]*${VAL}"
 		;;
 esac
 
 if ! echo "$res" | grep "$SUCCESS_REGEX" > /dev/null ; then
-	TRACE "${TAG} tag not added to file.  test failed."
+	if [[ "${#res}" == "0" ]] ; then
+		TRACE "${TAG} tag not added to file; file unchanged.  test failed."
+	else
+		TRACE "${TAG} tag not added to file.  test failed."
+	fi
 	test_result="failed"
 fi
 
@@ -103,7 +111,7 @@ if [[ "$test_result" == "passed" ]] ; then
 	TRACE "## END: TEST PASSED ##"
     exit 0
 else
-	TRACE "## END: TEST FAILED ##"
+	TRACE "## END: TEST FAILED ##  params: BIN=${BIN}  TEST_FILE=${TEST_FILE_ORIG}  TAG=${TAG}  VAL=${VAL}"
 	exit 1
 fi
 
