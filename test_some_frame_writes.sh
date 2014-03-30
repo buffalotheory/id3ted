@@ -53,10 +53,10 @@ if [[ ! -f "${MP3_FILE}" ]] ; then
 	exit 4
 fi
 
-./test1.sh "$MP3_FILE" || test_result="failed"
-./test1.sh "$MP3_FILE" TBPM || test_result="failed"
-./test1.sh "$MP3_FILE" TBPM 100.12 || test_result="failed"
-./test1.sh "$MP3_FILE" TPUB "Test Publisher" || test_result="failed"
+./test_tag_write_verify.sh "$MP3_FILE" || test_result="failed"
+./test_tag_write_verify.sh "$MP3_FILE" TBPM || test_result="failed"
+./test_tag_write_verify.sh "$MP3_FILE" TBPM 100.12 || test_result="failed"
+./test_tag_write_verify.sh "$MP3_FILE" TPUB "Test Publisher" || test_result="failed"
 
 if [[ "$test_result" == "passed" ]] ; then
 	TRACE "END: test passed"

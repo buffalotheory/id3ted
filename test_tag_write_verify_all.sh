@@ -94,14 +94,14 @@ cat writable_fields.lst \
 			VAL="VAL $TAG"
 			;;
 		esac
-		if ./test1.sh "$MP3_FILE" "$TAG" "$VAL" ; then
+		if ./test_tag_write_verify.sh "$MP3_FILE" "$TAG" "$VAL" ; then
 			num_passed=$(expr $num_passed + 1)
 		else
 			num_failed=$(expr $num_failed + 1)
 			test_result="failed"
 		fi
-		(( num_tags++ )) # bash iterator
-		# num_tags=$(expr $num_tags + 1) # busybox-safe iterator
+		# (( num_tags++ )) # bash iterator
+		num_tags=$(expr $num_tags + 1) # busybox-safe iterator; both work in bash
 		echo "" >&2 # for a little easier-to-read formatting
 	done
 	TRACE "Test Sequence complete: $num_passed tests passed, $num_failed tests failed, $num_tags total tags"
