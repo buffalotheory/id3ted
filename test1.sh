@@ -68,8 +68,8 @@ tags_after="$($BIN -l "$file_under_test")"
 
 MIN_TAG_LEN=3
 if [[ "${#tags_after}" -lt $MIN_TAG_LEN ]] ; then
-    TRACE "TEST FAILED: could not read tags from test file $file_under_test"
-    test_result="failed"
+	TRACE "TEST FAILED: could not read tags from test file $file_under_test"
+	test_result="failed"
 fi
 
 res="$(diff <(echo -e "$tags_before") <(echo -e "$tags_after"))"
@@ -79,22 +79,21 @@ echo -e "$res" | sed "s/^/\ \ \ /"
 
 # need tag-specific result handling
 case $TAG in
-    APIC)
-        SUCCESS_REGEX="> APIC: image/"
-        TRACE "APIC TAG REGEX: $SUCCESS_REGEX"
-        ;;
+	APIC)
+		SUCCESS_REGEX="> APIC: image/"
+		TRACE "APIC TAG REGEX: $SUCCESS_REGEX"
+		;;
 
-    COMM)
-        res="${res/\[\]\(XXX\): /}"
-        # COMM: [](XXX): VAL COMM
-        TRACE "COMM TAG: filtering diff"
-        ;;
-    *)
-        SUCCESS_REGEX="> [ \t]*${TAG}:[ \t]*${VAL}"
-        ;;
+	COMM)
+		res="${res/\[\]\(XXX\): /}"
+		# COMM: [](XXX): VAL COMM
+		TRACE "COMM TAG: filtering diff"
+		;;
+	*)
+		SUCCESS_REGEX="> [ \t]*${TAG}:[ \t]*${VAL}"
+		;;
 esac
 
-#if ! echo "$res" | grep "> [ \t]*${TAG}:[ \t]*${VAL}" > /dev/null ; then
 if ! echo "$res" | grep "$SUCCESS_REGEX" > /dev/null ; then
 	TRACE "${TAG} tag not added to file.  test failed."
 	test_result="failed"

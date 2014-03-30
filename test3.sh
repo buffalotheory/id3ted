@@ -18,11 +18,11 @@ function TRACE() {
 
 
 if [[ ! -d "$ORIGINAL_MEDIA_DIR" ]] ; then
-    mkdir -p "$ORIGINAL_MEDIA_DIR"
+	mkdir -p "$ORIGINAL_MEDIA_DIR"
 fi
 if [[ ! -d "$ORIGINAL_MEDIA_DIR" ]] ; then
-    echo "ERROR: failed to find or create ORIGINAL_MEDIA_DIR $ORIGINAL_MEDIA_DIR" >&2
-    exit 2
+	echo "ERROR: failed to find or create ORIGINAL_MEDIA_DIR $ORIGINAL_MEDIA_DIR" >&2
+	exit 2
 fi
 
 # randomly-selected, relatively-short mp3 with free license
@@ -30,17 +30,17 @@ fi
 MP3_URL="http://freemusicarchive.org/music/download/e263a939f306c27e29cdbbd0a8b11a380b2d5628"
 MP3_FILE="${ORIGINAL_MEDIA_DIR}/e263a939f306c27e29cdbbd0a8b11a380b2d5628"
 if [[ ! -f "${MP3_FILE}" ]] ; then
-    if ! pushd "$ORIGINAL_MEDIA_DIR" ; then
-        echo "ERROR: failed to change directory to ORIGINAL_MEDIA_DIR $ORIGINAL_MEDIA_DIR" >&2
-        exit 3
-    fi
-    wget http://freemusicarchive.org/music/download/"${MP3_FILE}"
-    popd
+	if ! pushd "$ORIGINAL_MEDIA_DIR" ; then
+		echo "ERROR: failed to change directory to ORIGINAL_MEDIA_DIR $ORIGINAL_MEDIA_DIR" >&2
+		exit 3
+	fi
+	wget http://freemusicarchive.org/music/download/"${MP3_FILE}"
+	popd
 fi
 
 if [[ ! -f "${MP3_FILE}" ]] ; then
-    echo "ERROR: failed to fetch mp3 test file $MP3_URL to local $MP3_FILE" >&2
-    exit 4
+	echo "ERROR: failed to fetch mp3 test file $MP3_URL to local $MP3_FILE" >&2
+	exit 4
 fi
 
 #if ! pushd "$TEST_DIR" ; then
