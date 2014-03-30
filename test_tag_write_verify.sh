@@ -13,7 +13,7 @@ BIN=./id3ted
 TEST_FILE_ORIG=""
 TEST_DIR="."
 TAG="TBPM"
-VAL="120.11"
+VAL="120"
 
 # import (source) config settings
 [[ test.conf ]] && [[ -f test.conf ]] && . test.conf
@@ -51,6 +51,7 @@ file_under_test="$TEST_DIR"/"$(basename "$TEST_FILE_ORIG")"
 TRACE "START TEST: executing id3 frame read/write test (params: BIN=${BIN}  TEST_FILE=${TEST_FILE_ORIG}  TAG=${TAG}  VAL=${VAL})"
 
 TRACE "copying source testfile $TEST_FILE_ORIG to working file $file_under_test"
+TRACE "cp -a '$TEST_FILE_ORIG' '$file_under_test'"
 cp -a "$TEST_FILE_ORIG" "$file_under_test"
 
 if $BIN -l "$file_under_test" | grep "> [ \t]*${TAG}:" > /dev/null ; then
@@ -61,6 +62,7 @@ fi
 tags_before="$($BIN -l "$file_under_test")"
 
 TRACE "writing ${TAG} with value '${VAL}' to $file_under_test"
+TRACE "$BIN --$TAG '$VAL' '$file_under_test'"
 $BIN --$TAG "$VAL" "$file_under_test"
 
 tags_after="$($BIN -l "$file_under_test")"
@@ -92,7 +94,12 @@ case $TAG in
 		res="${res/\[\]: /}"
 		TRACE "$TAG TAG: filtered diff"
 		;;
-	
+	USLT)
+		# solving this one with a massive bit of cat-on-the-keyboard sed ugliness
+		res="$(echo "$res" | sed -e 's/[ \t$]*>[ \t^]*//g;' -e :a -e '/):$/N; s/\[\](XXX):[ \t]*\n//; ta')"
+		TRACE "reformatted diff:"
+		echo -e "$res" | sed "s/^/\ \ \ /" >&2
+		;;
 	*)
 		SUCCESS_REGEX="> [ \t]*${TAG}:[ \t]*${VAL}"
 		;;
