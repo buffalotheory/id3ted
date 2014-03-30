@@ -76,11 +76,14 @@ $BIN --frame-list \
 		TBPM)
 			VAL="110"
 			;;
-		TPOS,TRCK)
+		TPOS|TRCK)
 			VAL="4/9"
 			;;
 		TRDA)
 			VAL="$(date)"
+			;;
+		TDRC)
+			VAL="12:34"
 			;;
 		TSIZ)
 			VAL="$(stat --format=%s "${MP3_FILE}")"
