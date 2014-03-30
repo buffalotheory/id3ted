@@ -26,7 +26,7 @@ function TRACE() {
 	echo -e "$(date "+%Y%m%d_%H%M%S") ${ME}: $1" >&2
 }
 
-TRACE "$(date): executing test to verify read/write of id3 BPM field"
+TRACE "START: executing test to verify read/write of id3 BPM field"
 
 # handle args
 if [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]] ; then
@@ -61,7 +61,7 @@ fi
 
 tags_before="$($BIN -l "$file_under_test")"
 
-TRACE "writing ${TAG} to $file_under_test"
+TRACE "writing ${TAG} with value '${VAL}' to $file_under_test"
 $BIN --$TAG "$VAL" "$file_under_test"
 
 tags_after="$($BIN -l "$file_under_test")"
@@ -74,17 +74,37 @@ fi
 
 res="$(diff <(echo -e "$tags_before") <(echo -e "$tags_after"))"
 
-TRACE "file modifications to ${file_under_test}:"
-echo -e "$res"
-if ! echo "$res" | grep "> [ \t]*${TAG}:[ \t]*${VAL}" > /dev/null ; then
+TRACE "changes to file_under_test ${file_under_test}:"
+echo -e "$res" | sed "s/^/\ \ \ /"
+
+# need tag-specific result handling
+case $TAG in
+    APIC)
+        SUCCESS_REGEX="> APIC: image/"
+        TRACE "APIC TAG REGEX: $SUCCESS_REGEX"
+        ;;
+
+    COMM)
+        res="${res/\[\]\(XXX\): /}"
+        # COMM: [](XXX): VAL COMM
+        TRACE "COMM TAG: filtering diff"
+        ;;
+    *)
+        SUCCESS_REGEX="> [ \t]*${TAG}:[ \t]*${VAL}"
+        ;;
+esac
+
+#if ! echo "$res" | grep "> [ \t]*${TAG}:[ \t]*${VAL}" > /dev/null ; then
+if ! echo "$res" | grep "$SUCCESS_REGEX" > /dev/null ; then
 	TRACE "${TAG} tag not added to file.  test failed."
 	test_result="failed"
 fi
 
 if [[ "$test_result" == "passed" ]] ; then
-	TRACE "test passed"
+	TRACE "## END: TEST PASSED ##"
     exit 0
 else
+	TRACE "## END: TEST FAILED ##"
 	exit 1
 fi
 

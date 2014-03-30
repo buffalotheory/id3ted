@@ -56,12 +56,13 @@ fi
 ./test1.sh "$MP3_FILE" || test_result="failed"
 ./test1.sh "$MP3_FILE" TBPM || test_result="failed"
 ./test1.sh "$MP3_FILE" TBPM 100.12 || test_result="failed"
-./test1.sh "$MP3_FILE" TPOP 50 || test_result="failed"
+./test1.sh "$MP3_FILE" TPUB "Test Publisher" || test_result="failed"
 
 if [[ "$test_result" == "passed" ]] ; then
-	TRACE "test passed"
+    TRACE "END: test passed"
     exit 0
 else
-	exit 1
+    TRACE "END: test failed"
+    exit 1
 fi
 
