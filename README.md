@@ -1,7 +1,7 @@
 id3ted
 ======
 
-**comand line id3 tag editor**
+**command line id3 tag editor**
 
 id3ted is written in C++, uses
 [TagLib](http://developer.kde.org/~wheeler/taglib/) by Scott Wheeler and should
@@ -29,6 +29,79 @@ Features
 
 News
 ----
+
+**March 31, 2014**
+
+Greetings.  This is a fork of the main id3ted app, created by Bryant Hansen.
+The credit for this project goes to Bert Muennich, and before him, Myers 
+Carpenter.  I have not coordiated any kind of handover or anything with either
+of them; this is just an independently-created fork for experimental purposes.
+
+id3ted was the only GPLv2 command-line tag editor that I found 
+which can edit the full range of tags specified in id3v2.3.0 (and perhaps 
+id3v2.4.0).  The tags written indicate 2.4.0 compatibility, but as far as I'm
+aware, id3v2.4.0 is only a draft standard, which is not complete in itself 
+without id3v2.3.0.
+
+
+ > This document is an informal standard and replaces the ID3v2.3.0
+ > standard [ID3v2]. A formal standard will use another revision number
+ > even if the content is identical to document.
+ >
+ > -- http://id3.org/id3v2.4.0-structure
+
+ > See also:
+
+ >  -- http://id3.org/id3v2.4.0-frames
+ >
+ >  -- http://id3.org/id3v2.3.0
+
+The updates that I've done involve testing.  I've written a few test scripts
+which write and verify the entire range of possible tags.  The structure can
+easily be extended to test wider ranges of values.
+
+The test scripts currently indicate possible issues with writing 3 of the 61
+possible frames/tags in id3v2.3.0.  The problem frames are PCNT, RBUF and USER.
+It's possible that some (or all) of the issues are due to issues in the test
+scripts, and not the id3ted utility.
+
+#####  Test Results
+<pre>
+  writing PCNT with value '1234' to /tmp/test_file.mp3
+  ./id3ted --PCNT '1234' '/tmp/test_file.mp3'
+  changes to file_under_test /tmp/test_file.mp3 (73 character diff):
+    6c6
+    < ID3v2.3 - 11 frames:
+    ---
+    > ID3v2.4 - 12 frames:
+    17a18
+    > PRIV: 1234
+  PCNT tag not added to file.  test failed.
+
+  writing RBUF with value '1024' to /tmp/test_file.mp3
+  ./id3ted --RBUF '1024' '/tmp/test_file.mp3'
+  changes to file_under_test /tmp/test_file.mp3 (68 character diff):
+    6c6
+    < ID3v2.3 - 11 frames:
+    ---
+    > ID3v2.4 - 12 frames:
+    17a18
+    > RBUF: 
+  RBUF tag not added to file.  test failed.
+
+  writing USER with value 'VAL USER' to /tmp/test_file.mp3
+  ./id3ted --USER 'VAL USER' '/tmp/test_file.mp3'
+  changes to file_under_test /tmp/test_file.mp3 (68 character diff):
+    6c6
+    < ID3v2.3 - 11 frames:
+    ---
+    > ID3v2.4 - 12 frames:
+    17a18
+    > USER: 
+  USER tag not added to file.  test failed.
+</pre>
+
+Quick Start: `make test`
 
 **January 13, 2011**
 
