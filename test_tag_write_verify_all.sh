@@ -13,7 +13,7 @@ BIN=./id3ted
 TEST_DIR="/tmp/"
 [[ "$2" ]] && TEST_DIR="$2"
 ORIGINAL_MEDIA_DIR="${TEST_DIR}/original_media"
-
+ORIGINAL_MEDIA_DIR="/projects/id3ted/mp3"
 
 # functions
 function TRACE() {
@@ -30,14 +30,15 @@ if [[ ! -d "$ORIGINAL_MEDIA_DIR" ]] ; then
 fi
 
 # MP3_URL: a randomly-selected (by the author), relatively-short mp3 file with free license
-MP3_URL="http://freemusicarchive.org/music/download/e263a939f306c27e29cdbbd0a8b11a380b2d5628"
-MP3_FILE="${ORIGINAL_MEDIA_DIR}/e263a939f306c27e29cdbbd0a8b11a380b2d5628"
+MP3_URL="https://archive.org/download/testmp3testfile/mpthreetest.mp3"
+MP3_FILE="${ORIGINAL_MEDIA_DIR}/mpthreetest.mp3"
+MP3_FILE="${ORIGINAL_MEDIA_DIR}/03-Leave_Me-Hybris.mp3"
 if [[ ! -f "${MP3_FILE}" ]] ; then
 	if ! pushd "$ORIGINAL_MEDIA_DIR" ; then
 		echo "ERROR: failed to change directory to ORIGINAL_MEDIA_DIR $ORIGINAL_MEDIA_DIR" >&2
 		exit 3
 	fi
-	wget http://freemusicarchive.org/music/download/"${MP3_FILE}"
+	wget -O "$MP3_FILE" "$MP3_URL"
 	popd
 fi
 
@@ -64,7 +65,10 @@ $BIN --frame-list \
 		APIC)
 			# TODO: better APIC test with image verify
 			VAL="http://www.w3.org/Graphics/PNG/alphatest.png"
-			[[ ! -f "alphatest" ]] && wget "$VAL"
+			if [[ ! -f "alphatest.png" ]] ; then
+				TRACE "alphatest.png does not exist.  Fetching from $VAL"
+				wget "$VAL"
+			fi
 			VAL="alphatest.png"
 			;;
 		PCNT)
