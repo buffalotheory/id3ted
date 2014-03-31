@@ -48,13 +48,13 @@ without id3v2.3.0.
  > standard [ID3v2]. A formal standard will use another revision number
  > even if the content is identical to document.
  >
- > -- http://id3.org/id3v2.4.0-structure
+ > -- <http://id3.org/id3v2.4.0-structure>
 
  > See also:
 
- >  -- http://id3.org/id3v2.4.0-frames
+ >  -- <http://id3.org/id3v2.4.0-frames>
  >
- >  -- http://id3.org/id3v2.3.0
+ >  -- <http://id3.org/id3v2.3.0>
 
 The updates that I've done involve testing.  I've written a few test scripts
 which write and verify the entire range of possible tags.  The structure can
@@ -64,6 +64,8 @@ The test scripts currently indicate possible issues with writing 3 of the 61
 possible frames/tags in id3v2.3.0.  The problem frames are PCNT, RBUF and USER.
 It's possible that some (or all) of the issues are due to issues in the test
 scripts, and not the id3ted utility.
+
+Quick Start: `make test`
 
 #####  Test Results
 <pre>
@@ -99,9 +101,9 @@ scripts, and not the id3ted utility.
     17a18
     > USER: 
   USER tag not added to file.  test failed.
-</pre>
 
-Quick Start: `make test`
+  Test Sequence complete: 58 tests passed, 3 tests failed, 61 total tags
+</pre>
 
 **January 13, 2011**
 
