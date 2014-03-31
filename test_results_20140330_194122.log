@@ -1,0 +1,677 @@
+20140330_194122 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=APIC  VAL=alphatest.png)
+20140330_194122 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: writing APIC with value 'alphatest.png' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (75 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > APIC: image/png, 25.91 KB (26529 bytes)
+20140330_194122 test_tag_write_verify.sh: APIC TAG REGEX: > APIC: image/
+20140330_194122 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194122 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=COMM  VAL=VAL COMM)
+20140330_194122 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: writing COMM with value 'VAL COMM' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (59 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > COMM: [](XXX): VAL COMM
+20140330_194122 test_tag_write_verify.sh: COMM TAG: filtered diff
+20140330_194122 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194122 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=PCNT  VAL=1234)
+20140330_194122 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: writing PCNT with value '1234' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (47 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > PRIV: 1234
+20140330_194122 test_tag_write_verify.sh: PCNT tag not added to file.  test failed.
+20140330_194122 test_tag_write_verify.sh: ## END: TEST FAILED ##  params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=PCNT  VAL=1234
+
+20140330_194122 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=RBUF  VAL=1024)
+20140330_194122 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: writing RBUF with value '1024' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (42 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > RBUF: 
+20140330_194122 test_tag_write_verify.sh: RBUF tag not added to file.  test failed.
+20140330_194122 test_tag_write_verify.sh: ## END: TEST FAILED ##  params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=RBUF  VAL=1024
+
+20140330_194122 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TALB  VAL=VAL TALB)
+20140330_194122 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: writing TALB with value 'VAL TALB' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TALB: VAL TALB
+20140330_194122 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194122 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TBPM  VAL=110)
+20140330_194122 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: writing TBPM with value '110' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (45 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TBPM: 110
+20140330_194122 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194122 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TCOM  VAL=VAL TCOM)
+20140330_194122 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: writing TCOM with value 'VAL TCOM' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TCOM: VAL TCOM
+20140330_194122 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194122 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TCON  VAL=VAL TCON)
+20140330_194122 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: writing TCON with value 'VAL TCON' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TCON: VAL TCON
+20140330_194122 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194122 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TCOP  VAL=VAL TCOP)
+20140330_194122 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: writing TCOP with value 'VAL TCOP' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TCOP: VAL TCOP
+20140330_194122 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194122 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TDEN  VAL=VAL TDEN)
+20140330_194122 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: writing TDEN with value 'VAL TDEN' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TDEN: VAL TDEN
+20140330_194122 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194122 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TDLY  VAL=VAL TDLY)
+20140330_194122 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: writing TDLY with value 'VAL TDLY' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TDLY: VAL TDLY
+20140330_194122 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194122 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TDOR  VAL=VAL TDOR)
+20140330_194122 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: writing TDOR with value 'VAL TDOR' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TDOR: VAL TDOR
+20140330_194122 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194122 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TDRC  VAL=VAL TDRC)
+20140330_194122 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: writing TDRC with value 'VAL TDRC' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: TEST FAILED: could not read tags from test file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (0 character diff):
+   
+20140330_194122 test_tag_write_verify.sh: TDRC tag not added to file; file unchanged.  test failed.
+20140330_194122 test_tag_write_verify.sh: ## END: TEST FAILED ##  params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TDRC  VAL=VAL TDRC
+
+20140330_194122 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TDRL  VAL=VAL TDRL)
+20140330_194122 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: writing TDRL with value 'VAL TDRL' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TDRL: VAL TDRL
+20140330_194122 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194122 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TDTG  VAL=VAL TDTG)
+20140330_194122 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: writing TDTG with value 'VAL TDTG' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TDTG: VAL TDTG
+20140330_194122 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194122 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TENC  VAL=VAL TENC)
+20140330_194122 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: writing TENC with value 'VAL TENC' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TENC: VAL TENC
+20140330_194122 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194122 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TEXT  VAL=VAL TEXT)
+20140330_194122 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: writing TEXT with value 'VAL TEXT' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TEXT: VAL TEXT
+20140330_194122 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194122 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TFLT  VAL=VAL TFLT)
+20140330_194122 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: writing TFLT with value 'VAL TFLT' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TFLT: VAL TFLT
+20140330_194122 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194122 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TIT1  VAL=VAL TIT1)
+20140330_194122 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: writing TIT1 with value 'VAL TIT1' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194122 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TIT1: VAL TIT1
+20140330_194122 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194122 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TIT2  VAL=VAL TIT2)
+20140330_194122 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing TIT2 with value 'VAL TIT2' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TIT2: VAL TIT2
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TIT3  VAL=VAL TIT3)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing TIT3 with value 'VAL TIT3' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TIT3: VAL TIT3
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TKEY  VAL=VAL TKEY)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing TKEY with value 'VAL TKEY' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TKEY: VAL TKEY
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TLAN  VAL=VAL TLAN)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing TLAN with value 'VAL TLAN' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TLAN: VAL TLAN
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TLEN  VAL=VAL TLEN)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing TLEN with value 'VAL TLEN' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TLEN: VAL TLEN
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TMCL  VAL=VAL TMCL)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing TMCL with value 'VAL TMCL' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TMCL: VAL TMCL
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TMED  VAL=VAL TMED)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing TMED with value 'VAL TMED' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TMED: VAL TMED
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TMOO  VAL=VAL TMOO)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing TMOO with value 'VAL TMOO' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TMOO: VAL TMOO
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TOAL  VAL=VAL TOAL)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing TOAL with value 'VAL TOAL' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TOAL: VAL TOAL
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TOFN  VAL=VAL TOFN)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing TOFN with value 'VAL TOFN' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TOFN: VAL TOFN
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TOLY  VAL=VAL TOLY)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing TOLY with value 'VAL TOLY' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TOLY: VAL TOLY
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TOPE  VAL=VAL TOPE)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing TOPE with value 'VAL TOPE' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TOPE: VAL TOPE
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TORY  VAL=VAL TORY)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing TORY with value 'VAL TORY' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TORY: VAL TORY
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TOWN  VAL=VAL TOWN)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing TOWN with value 'VAL TOWN' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TOWN: VAL TOWN
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TPE1  VAL=VAL TPE1)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing TPE1 with value 'VAL TPE1' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TPE1: VAL TPE1
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TPE2  VAL=VAL TPE2)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing TPE2 with value 'VAL TPE2' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TPE2: VAL TPE2
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TPE3  VAL=VAL TPE3)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing TPE3 with value 'VAL TPE3' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TPE3: VAL TPE3
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TPE4  VAL=VAL TPE4)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing TPE4 with value 'VAL TPE4' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TPE4: VAL TPE4
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TPOS  VAL=VAL TPOS)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing TPOS with value 'VAL TPOS' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TPOS: VAL TPOS
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TPRO  VAL=VAL TPRO)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing TPRO with value 'VAL TPRO' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TPRO: VAL TPRO
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TPUB  VAL=VAL TPUB)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing TPUB with value 'VAL TPUB' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TPUB: VAL TPUB
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TRCK  VAL=VAL TRCK)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing TRCK with value 'VAL TRCK' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: TEST FAILED: could not read tags from test file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (0 character diff):
+   
+20140330_194123 test_tag_write_verify.sh: TRCK tag not added to file; file unchanged.  test failed.
+20140330_194123 test_tag_write_verify.sh: ## END: TEST FAILED ##  params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TRCK  VAL=VAL TRCK
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TRSN  VAL=VAL TRSN)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing TRSN with value 'VAL TRSN' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TRSN: VAL TRSN
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TRSO  VAL=VAL TRSO)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing TRSO with value 'VAL TRSO' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TRSO: VAL TRSO
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TSOA  VAL=VAL TSOA)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing TSOA with value 'VAL TSOA' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TSOA: VAL TSOA
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TSOP  VAL=VAL TSOP)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing TSOP with value 'VAL TSOP' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TSOP: VAL TSOP
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TSOT  VAL=VAL TSOT)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing TSOT with value 'VAL TSOT' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TSOT: VAL TSOT
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TSRC  VAL=CC-XXX-YY-NNNNN)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing TSRC with value 'CC-XXX-YY-NNNNN' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (57 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TSRC: CC-XXX-YY-NNNNN
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TSSE  VAL=VAL TSSE)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing TSSE with value 'VAL TSSE' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TSSE: VAL TSSE
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TSST  VAL=VAL TSST)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing TSST with value 'VAL TSST' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > TSST: VAL TSST
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TXXX  VAL=VAL TXXX)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing TXXX with value 'VAL TXXX' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+id3ted: Missing description field in --TXXX option argument: VAL TXXX
+Try `./id3ted --help' for more information.
+20140330_194123 test_tag_write_verify.sh: TEST FAILED: could not read tags from test file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (0 character diff):
+   
+20140330_194123 test_tag_write_verify.sh: TXXX tag not added to file; file unchanged.  test failed.
+20140330_194123 test_tag_write_verify.sh: ## END: TEST FAILED ##  params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=TXXX  VAL=VAL TXXX
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=USER  VAL=VAL USER)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing USER with value 'VAL USER' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (42 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > USER: 
+20140330_194123 test_tag_write_verify.sh: USER tag not added to file.  test failed.
+20140330_194123 test_tag_write_verify.sh: ## END: TEST FAILED ##  params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=USER  VAL=VAL USER
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=USLT  VAL=VAL USLT)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing USLT with value 'VAL USLT' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (65 character diff):
+   1c1,3
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > USLT: [](XXX):
+   >     VAL USLT
+20140330_194123 test_tag_write_verify.sh: USLT tag not added to file.  test failed.
+20140330_194123 test_tag_write_verify.sh: ## END: TEST FAILED ##  params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=USLT  VAL=VAL USLT
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=WCOM  VAL=VAL WCOM)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing WCOM with value 'VAL WCOM' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > WCOM: VAL WCOM
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=WCOP  VAL=VAL WCOP)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing WCOP with value 'VAL WCOP' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > WCOP: VAL WCOP
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=WOAF  VAL=VAL WOAF)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing WOAF with value 'VAL WOAF' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > WOAF: VAL WOAF
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=WOAR  VAL=VAL WOAR)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing WOAR with value 'VAL WOAR' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > WOAR: VAL WOAR
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=WOAS  VAL=VAL WOAS)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing WOAS with value 'VAL WOAS' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > WOAS: VAL WOAS
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=WORS  VAL=VAL WORS)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing WORS with value 'VAL WORS' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > WORS: VAL WORS
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=WPAY  VAL=VAL WPAY)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing WPAY with value 'VAL WPAY' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > WPAY: VAL WPAY
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=WPUB  VAL=VAL WPUB)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing WPUB with value 'VAL WPUB' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (50 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > WPUB: VAL WPUB
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify.sh: START TEST: executing id3 frame read/write test (params: BIN=./id3ted  TEST_FILE=/tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628  TAG=WXXX  VAL=VAL WXXX)
+20140330_194123 test_tag_write_verify.sh: copying source testfile /tmp//original_media/e263a939f306c27e29cdbbd0a8b11a380b2d5628 to working file /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: writing WXXX with value 'VAL WXXX' to /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628
+20140330_194123 test_tag_write_verify.sh: changes to file_under_test /tmp/e263a939f306c27e29cdbbd0a8b11a380b2d5628 (54 character diff):
+   1c1,2
+   < 
+   ---
+   > ID3v2.4 - 1 frame:
+   > WXXX: []: VAL WXXX
+20140330_194123 test_tag_write_verify.sh: WXXX TAG: filtered diff
+20140330_194123 test_tag_write_verify.sh: ## END: TEST PASSED ##
+
+20140330_194123 test_tag_write_verify_all.sh: Test Sequence complete: 54 tests passed, 7 tests failed, 61 total tags
+20140330_194123 test_tag_write_verify_all.sh: END: AT LEAST 1 TEST FAILED
